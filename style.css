@@ -52,10 +52,23 @@ h1, h2, h3, p {
 .navegacion {
     display: flex;
     position: absolute;
-    bottom: 10px;
-    left: 50px;
+    bottom: 1rem;
+    left: 5rem;
 }
 
+@media (max-width: 768px) {
+    .navegacion {
+        flex-direction: column; 
+        left: 50%; /* Mueve la navegación al centro horizontalmente */
+        transform: translateX(-50%); /* Centra la navegación */
+        align-items: center; /* Centra los elementos dentro del contenedor */
+    }
+
+    .navegacion a {
+        font-size: 1.5rem; /* Reduce el tamaño de fuente de los enlaces */
+        margin: 5px 0; /* Espaciado vertical entre enlaces */
+    }
+}
 .navegacion a {
     color: #FFFFCC;
     text-decoration: none;
@@ -74,6 +87,12 @@ h1, h2, h3, p {
     grid-template-columns: repeat(12, 1fr);
     gap: 10px;
     padding: 50px;
+}
+
+@media (max-width: 768px) {
+    .contenedor {
+        display: block;
+    }
 }
 
 .cuerpo-blog {
@@ -158,6 +177,8 @@ h1, h2, h3, p {
 
 .navegacion-aside a {
     display: block;
+    margin-left: 3rem;
+    width: 60%;
     padding: .5rem;
     text-decoration: none;
     font-weight: 700;
@@ -180,8 +201,9 @@ h1, h2, h3, p {
     padding: 10px; /* Espaciado interno */
     border: 1px solid #ccc; /* Borde */
     border-radius: 4px; /* Bordes redondeados */
-    margin-bottom: 10px; /* Espaciado inferior */
-    font-size: 16px; /* Tamaño de fuente */
+    margin-top: 1rem;
+    margin-bottom: 1rem; /* Espaciado inferior */
+    font-size: 1.6rem; /* Tamaño de fuente */
 }
 
 .boton-formulario {
@@ -197,7 +219,7 @@ h1, h2, h3, p {
 
 .footer {
     text-align: center;
-    padding: 10px;
+    padding: 1rem;
     background: linear-gradient(90deg, var(--primary-color), var(--primary-color-light));
     color: white;
 }

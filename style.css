@@ -57,6 +57,15 @@ h1, h2, h3, p {
 }
 
 @media (max-width: 768px) {
+    .header {
+        height: 15rem;
+    }
+
+    .header h1 {
+        position: absolute;
+        top: 0;
+    }
+
     .navegacion {
         flex-direction: column; 
         left: 50%; /* Mueve la navegación al centro horizontalmente */
